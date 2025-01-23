@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampil Tabel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function confirmDelete() {
+            return confirm("Apakah Anda yakin ingin menghapus data ini?");
+        }
+    </script>
+</head>
+<body>
+    <h2>Data Mahasiswa</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2022804123</td>
+                <td>Antonio</td>
+                <td>70</td>
+                <td>
+                    <a href="#">Edit</a> | 
+                    <a href="#" onclick="return confirmDelete()">Hapus</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2022804154</td>
+                <td>Diana</td>
+                <td>80</td>
+                <td>
+                    <a href="#">Edit</a> | 
+                    <a href="#" onclick="return confirmDelete()">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
